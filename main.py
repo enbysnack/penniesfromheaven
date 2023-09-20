@@ -13,8 +13,6 @@ def convert_pennies(amount):
 def main():
     try:
       pennies_input = int(input("Enter the amount in pennies: "))
-      if pennies_input == "quit":
-         return False
       if pennies_input < 0:
         print("Please enter a non-negative number of pennies.")
         return True
@@ -27,6 +25,7 @@ def main():
         print(f"Nickels: {nickels}")
         print(f"Pennies: {pennies}")
         return True
+      
     except ValueError:
       print("Please enter a valid number of pennies.")
       return True
